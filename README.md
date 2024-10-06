@@ -108,7 +108,7 @@ Lemmatizes input text.
 #### Importing Lexio.js
 you can use a CDN to include Lexio in directly in your project!
 ```
-<script src="[cdn coming soon]"></script>
+<script src="[https://cdn.jsdelivr.net/gh/SomnathDevPro/LexioJS@main/src/lexio.min.js]"></script>
 ```
 
 
