@@ -1,5 +1,5 @@
 # LexioJS
-Introducing LexioJS a lightweight(~7.60 kb minified) simple JavaScript which provides you a simple API for performing basic NLP tasks Such as:
+Introducing LexioJS a lightweight(~7.60 kb minified) simple JavaScript library built with vanilla JS which provides you a lightning fast API for performing basic NLP tasks Such as:
 ```
   -Tokenization
   -Text Processing 
@@ -169,3 +169,6 @@ Lexio.js is licensed under the MIT License.
 
 
 Pull requests and issues are welcome!
+
+thanks for checking out my project 😊 
+please give me a star if you liked...
