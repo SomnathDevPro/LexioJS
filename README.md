@@ -8,6 +8,7 @@ Introducing LexioJS a lightweight(~7.60 kb minified) simple JavaScript library b
   -NER
   -stemming
   -lemmatization
+  -feature extraction
 ```
 ## Overview
 
@@ -101,6 +102,16 @@ Lemmatizes input text.
 - `lemmatize(text: string)`: Lemmatizes the input text.
     - Returns: An array of lemmatized tokens
 
+### Lbow
+
+#### description 
+
+extracts features from a text into a feature vector object,using bag of words
+
+#### methods
+
+- `createVocab(texts: array)`: creates an object containing the words in a document or list of sentences.
+- `createFeatureVector(text: string)`: creates an array of all the features in a sentence and their occurrences 
 
 ## Usage
 
