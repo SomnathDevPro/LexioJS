@@ -111,7 +111,7 @@ extracts features from a text into a feature vector object,using bag of words
 #### methods
 
 - `createVocab(texts: array)`: creates an object containing the words in a document or list of sentences.
-- `createFeatureVector(text: string)`: creates an array of all the features in a sentence and their occurrences 
+- `createFeatureVector(text: string)`: creates an object of all the document in sentence and their occurrences 
 
 ## Usage
 
@@ -119,7 +119,7 @@ extracts features from a text into a feature vector object,using bag of words
 #### Importing Lexio.js
 you can use a CDN to include Lexio in directly in your project!
 ```
-<script src="https://cdn.jsdelivr.net/gh/SomnathDevPro/LexioJS@main/src/lexio.min.js"></script>
+<script src="lexio-js.vercel.app/src/lexio.min.js"></script>
 ```
 
 
