@@ -519,3 +519,43 @@ class LexioLemmatizer {
     }
   }
 }
+class Lbow {
+  constructor() {
+    this.vocab={}
+    this.docCount=0;
+  }
+  createVocab(texts){
+    const lexio = new Lexio();
+    const tokenizer = new lexio.Tokenizer()
+    const swr = new lexio.StopWordRemover()
+    const lep = new LexioPorterStemmer()
+    texts.forEach(text=>{
+      text = lep.stem(text)
+     let tokens= swr.removeStopWords(tokenizer.tokenize(text))
+     tokens.forEach(token=>{
+       if (!this.vocab[token]) {
+         this.vocab[token]=0
+       }else{
+         this.vocab[token]++
+       }
+     })
+    })
+    this.docCount=texts.length;
+  }
+  createFeatureVector(text){
+     const lexio = new Lexio();
+    const tokenizer = new lexio.Tokenizer()
+    const tokens = tokenizer.tokenize(text)
+    const vector = {}
+    Object.keys(this.vocab).forEach(feature=>{
+      vector[feature] = tokens.includes(feature)?1:0;
+    });
+    return vector;
+  }
+  getDocCount(){
+    return this.docCount
+  }
+  getVocabSize(){
+    return Object.keys(this.vocab).length
+  }
+}
