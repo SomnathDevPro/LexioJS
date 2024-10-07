@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LexioJS</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  overflow:auto;
+}
+
+code {
+  font-family: monospace;
+}
+.root{
+  padding:20px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LexioJS</h1>
+    <p>A lightweight (~7.60 kb minified) simple JavaScript library for Natural Language Processing (NLP) tasks.</p>
+  </header>
+  <section class="root">
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>Lexio.js provides various classes and methods for text processing, sentiment analysis, named entity recognition, stemming, and lemmatization.</p>
+  </section>
+  <section id="classes">
+    <h2>Classes</h2>
+    <h3>Lexio</h3>
+    <p>The core class containing Tokenizer and StopWordRemover.</p>
+    <ul>
+      <li><code>Tokenizer</code>
+        <ul>
+          <li><code>tokenize(text: string)</code>: Tokenizes the input text into individual words or tokens.</li>
+          <li><code>removePunctuation(text: string)</code>: Removes punctuation from the input text.</li>
+          <li><code>expandContractions(text: string)</code>: Expands contractions in the input text.</li>
+        </ul>
+      </li>
+      <li><code>StopWordRemover</code>
+        <ul>
+          <li><code>removeStopWords(tokens: array)</code>: Removes stopwords from the input tokens.</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>LexioSentimentAnalyzer</h3>
+    <p>Analyzes sentiment of input text.</p>
+    <ul>
+      <li><code>analyzeSentiment(text: string)</code>: Analyzes sentiment of the input text.</li>
+    </ul>
+    <h3>Lner (Named Entity Recognizer)</h3>
+    <p>Identifies named entities in input text.</p>
+    <ul>
+      <li><code>identifyEntities(text: string)</code>: Identifies named entities in the input text.</li>
+    </ul>
+    <h3>LexioPorterStemmer</h3>
+    <p>Stems input tokens.</p>
+    <ul>
+      <li><code>stem(token: string)</code>: Stems the input token.</li>
+    </ul>
+    <h3>LexioLemmatizer</h3>
+    <p>Lemmatizes input text.</p>
+    <ul>
+      <li><code>lemmatize(text: string)</code>: Lemmatizes the input text.</li>
+    </ul>
+  </section>
+  <section id="usage">
+    <h2>Usage</h2>
+    <h3>Importing Lexio.js</h3>
+    <p>You can use a CDN to include Lexio in directly in your project!</p>
+    <pre><code>&lt;script src="(link unavailable)"&gt;&lt;/script&gt;</code></pre>
+    <h3>Tokenization</h3>
+    <pre><code>const lexio = new Lexio();
+const tokenizer = new lexio.Tokenizer();
+const tokens = tokenizer.tokenize('This is an example sentence.');
+console.log(tokens); // Output: ["This", "is", "an", "example", "sentence"]</code></pre>
+    <h3>Sentiment Analysis</h3>
+    <pre><code>const lexio = new Lexio();
+const sentimentAnalyzer = new LexioSentimentAnalyzer();
+const sentiment = sentimentAnalyzer.analyzeSentiment('I love this product!');
+console.log(sentiment); // Output: "positive"</code></pre>
+    <h3>Named Entity Recognition</h3>
+    <pre><code>const lexio = new Lexio();
+const ner = new Lner();
+const entities = ner.identifyEntities('John Smith is a software engineer at Google.');
+console.log(entities); // Output: [{"token": "John Smith", "type": "Person"}, {"token": "Google", "type": "Organization"}]</code></pre>
+    <h3>Stemming</h3>
+    <pre><code>const stemmer = new LexioPorterStemmer();
+const stemmedToken = stemmer.stem('running');
+console.log(stemmedToken); // Output: "run"</code></pre>
+Here's the remaining HTML code:
+
+
+```
+    <h3>Lemmatization</h3>
+    <pre><code>const lemmatizer = new LexioLemmatizer();
+const lemmatizedTokens = lemmatizer.lemmatize('The quick brown fox jumps over the lazy dog.');
+console.log(lemmatizedTokens); // Output: ["The", "quick", "brown", "fox", "jump", "over", "the", "lazy", "dog"]</code></pre>
+  </section>
+  <section id="license">
+    <h2>License</h2>
+    <p>Lexio.js is licensed under the MIT License.</p>
+  </section>
+  <section id="contributing">
+    <h2>Contributing</h2>
+    <p>Pull requests and issues are welcome!</p>
+  </section>
+  </section>
+  <footer>
+    <p>Thanks for checking out my project!</p>
+    <p>Please give me a star if you liked...</p>
+    <a href="(GitHub link)">Star on GitHub</a>
+  </footer>
+  <script src="(link unavailable)"></script>
+</body>
+</html>
